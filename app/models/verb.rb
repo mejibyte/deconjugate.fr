@@ -1,5 +1,5 @@
 class Verb
-  LONGEST = 50 # Let's assume the longest verb has at most 100 characters.
+  LONGEST = 50 # Let's assume the longest verb has at most 50 characters.
   
   attr_accessor :conjugation
   
