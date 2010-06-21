@@ -4,7 +4,7 @@ class Verb
   attr_accessor :conjugation
   
   def initialize(infinitive)
-    s = %x(french-conjugator --pronouns #{infinitive})
+    s = %x(french-conjugator --pronouns --utf8 #{infinitive})
     raise ArgumentError.new("'#{infinitive}' is not a valid verb") if s == /-\n/ 
     @conjugation = { }
     tense, conjugations = "", []
@@ -22,7 +22,7 @@ class Verb
   
   # Returns an array of verbs that have 'tense' in one of their conjugated forms.
   def self.build(tense)
-    s = %x(french-deconjugator #{tense})
+    s = %x(french-deconjugator --utf8 #{tense})
     verbs = s.split($/).collect { |t| t.split(",").first }.uniq
     verbs.collect { |v| Verb.new(v) }
   end
