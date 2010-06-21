@@ -96,6 +96,7 @@ button{
 .conjugations .set {
   background: gray;
   margin: 5px;
+  padding: 5px;
 }
 
 .highlighted {

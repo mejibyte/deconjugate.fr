@@ -1,6 +1,15 @@
 <div class="description">
+  Enter any conjugated French verb:
+</div>
+<div>
   <% form_tag verbs_path, :method => :get do %>
     <%= text_field_tag :s %>
     <button type="submit">Go!</button>
   <% end %>
+  <div class="examples">
+    Example:
+    <%= link_to "aime", "#", :rel => "aime" %>,
+    <%= link_to "suivis", "#", :rel => "suivis" %> or
+    <%= link_to "ayez", "#", :rel => "ayez" %>
+  </div>
 </div>

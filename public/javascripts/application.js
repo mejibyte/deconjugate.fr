@@ -4,4 +4,8 @@ $(function(){
       columnWidth: 100
     });
   });
+  
+  $(".examples a").click(function(){
+    $("input#s").val($(this).attr("rel"));
+  });
 });

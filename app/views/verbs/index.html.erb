@@ -1,6 +1,8 @@
 <% @verbs.each do |verb| %>
   <div class="verb">
-  <div class="infinitive"><%= verb.infinitive %></div>
+  <div class="infinitive">
+  <h1><%= verb.infinitive %></h1>
+  </div>
 
   <div class="conjugations">
     <% verb.displayed_conjugation.each do |key, value| %>
