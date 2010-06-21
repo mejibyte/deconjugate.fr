@@ -1,0 +1,21 @@
+<% @verbs.each do |verb| %>
+  <div class="verb">
+  <div class="infinitive"><%= verb.infinitive %></div>
+
+  <div class="conjugations">
+    <% verb.displayed_conjugation.each do |key, value| %>
+      <div class="set">
+        <div class="title"><%= reverse_words(key) %></div>
+        <ul>
+          <% value.each do |word| %>
+            <% unless word.blank? %>
+              <%= content_tag :li, word, :class => (conjugation_matches?(word, params[:s]) ? "highlighted" : "not-highlighted") %>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  
+  </div>
+<% end %>
