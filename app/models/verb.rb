@@ -1,5 +1,5 @@
 class Verb
-  LONGEST = "désinstitutionnaliser".size
+  LONGEST = 50 # Let's assume the longest verb has at most 100 characters.
   
   attr_accessor :conjugation
   
