@@ -1,15 +1,25 @@
-<div class="description">
-  Enter any conjugated French verb:
+<div class="logo">
+<div class="title">
+  <h1>DECONJUGATE.FR</h2>
+  </div>
+  <div class="description">
+    Enter any French in any conjugated form:
+  </div>
 </div>
-<div>
+
+
+<div class="search-box">
   <% form_tag verbs_path, :method => :get do %>
+  <div class="field">
     <%= text_field_tag :s %>
     <button type="submit">Go!</button>
-  <% end %>
-  <div class="examples">
-    Example:
-    <%= link_to "aime", "#", :rel => "aime" %>,
-    <%= link_to "suivis", "#", :rel => "suivis" %> or
-    <%= link_to "ayez", "#", :rel => "ayez" %>
   </div>
+  <% end %>
+</div>
+
+<div class="examples">
+  Try
+  <%= link_to "aime", "#", :rel => "aime" %>,
+  <%= link_to "étudierai", "#", :rel => "étudierai" %> or
+  <%= link_to "haïssez", "#", :rel => "haïssez" %>
 </div>
