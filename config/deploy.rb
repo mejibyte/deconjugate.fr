@@ -8,7 +8,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:andmej/deconjugate.it.git"
+set :repository, "git@github.com:andmej/deconjugate.fr.git"
 set :branch, "master"
 
 namespace :deploy do
