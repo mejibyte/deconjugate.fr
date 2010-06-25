@@ -1,6 +1,7 @@
 class VerbsController < ApplicationController
   def index
-    @verbs = params[:s].blank? ? [] : Verb.build(params[:s][0..Verb::LONGEST].downcase)
+    params[:s].downcase! unless params[:s].nil?
+    @verbs = params[:s].blank? ? [] : Verb.build(params[:s][0..Verb::LONGEST])
   end
   
   def search
