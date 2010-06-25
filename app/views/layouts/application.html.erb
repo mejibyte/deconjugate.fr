@@ -6,6 +6,7 @@
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag "jquery", "jquery.masonry", "application" %>
     <%= yield(:head) %>
+    <%= render :partial => "shared/google_analytics" %>
   </head>
   <body>
     <div id="container">
