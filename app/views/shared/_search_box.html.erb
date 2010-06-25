@@ -1,0 +1,8 @@
+<div class="search-box">
+  <% form_tag verbs_path, :method => :get do %>
+  <div class="field">
+    <%= text_field_tag :s %>
+    <button type="submit">Go!</button>
+  </div>
+  <% end %>
+</div>

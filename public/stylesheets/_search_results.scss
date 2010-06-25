@@ -1,0 +1,44 @@
+h1 {
+  padding: 20px;
+  text-shadow:0 -2px 0 rgba(248, 219, 172, 0.4);  
+  color: #2f1b57;
+}
+
+.verb {
+  background: white;
+  padding: 20px;
+}
+
+.conjugations .set {
+  background: #fcf9f3;
+  padding: 6px;
+  margin: {
+    bottom: 15px;
+    left: 15px;
+  };
+  border: 1px solid #f8dcae;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;  
+ 
+ 
+  .highlighted, .not-highlighted {
+    padding: 0 2px;
+  }
+
+  .highlighted {
+    background: #efc1a3;
+  }
+ 
+  li {
+    margin-bottom: 4px;
+  }
+  
+  .title span {
+    font-weight: bold;
+    border-bottom: 1px dashed #f8dcae;
+  }
+}
+
+.bottom span {
+  margin-left: 15%;
+}

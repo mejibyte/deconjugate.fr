@@ -1,23 +1,22 @@
-<% @verbs.each do |verb| %>
-  <div class="verb">
-  <div class="infinitive">
-  <h1><%= verb.infinitive %></h1>
-  </div>
-
+<% if @verbs.empty? %>
+<div class="error">
+  <h1>Oh là là!</h1>
   <div class="conjugations">
-    <% verb.displayed_conjugation.each do |key, value| %>
       <div class="set">
-        <div class="title"><%= reverse_words(key) %></div>
-        <ul>
-          <% value.each do |word| %>
-            <% unless word.blank? %>
-              <%= content_tag :li, word, :class => (conjugation_matches?(word, params[:s]) ? "highlighted" : "not-highlighted") %>
-            <% end %>
-          <% end %>
-        </ul>
+          It <%= example_link("looks", "regarder") %> like you <%= example_link("are", "être") %> <%= example_link("inventing", "inventer") %> your own French, because we <%= example_link("couldn't", "pouvoir") %> <%= example_link("find", "trouver") %> <i><%= params[:s] %></i>
+          anywhere. Perhaps you <%= example_link("want", "vouloir") %> to <%= example_link("do", "faire") %> some research first? (or just <%= example_link("check", "vérifier") %> your spelling)
       </div>
-    <% end %>
   </div>
-  
-  </div>
+</div>
+
+<% else %>
+  <% @verbs.each do |verb| %>
+    <%= render "verb", :object => verb %>
+  <% end %>
 <% end %>
+
+<div class="bottom">
+  <span>Search for another one:</span>
+  <%= render :partial => "shared/search_box" %>
+</div>
+

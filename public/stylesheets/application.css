@@ -1,6 +1,11 @@
+h1 {
+  margin: 0;
+  padding: 0; }
+
 body {
   font-family: Garamond, serif;
-  font-size: 22px; }
+  font-size: 22px;
+  color: #20113d; }
 
 a img {
   border: none; }
@@ -14,9 +19,8 @@ a {
   overflow: hidden; }
 
 #container {
-  width: 670px;
+  width: 750px;
   margin: 0 auto;
-  background-color: #FFF;
   padding: 20px 40px;
   margin-top: 20px; }
 
@@ -64,14 +68,6 @@ a {
   font-size: 12px;
   list-style: disc; }
 
-.conjugations .set {
-  background: gray;
-  margin: 5px;
-  padding: 5px; }
-
-.highlighted {
-  background: red; }
-
 .logo {
   text-indent: -9999em;
   background: url(/images/logo.png) no-repeat;
@@ -105,7 +101,7 @@ a {
     text-indent: -9999em;
     height: 57px; }
 
-.examples {
+div.examples {
   width: 460px;
   margin-left: 40px;
   padding-top: 10px;
@@ -120,3 +116,33 @@ a {
   bottom: 0px;
   right: 10px;
   text-indent: -9999em; }
+
+h1 {
+  padding: 20px;
+  text-shadow: 0 -2px 0 rgba(248, 219, 172, 0.4);
+  color: #2f1b57; }
+
+.verb {
+  background: white;
+  padding: 20px; }
+
+.conjugations .set {
+  background: #fcf9f3;
+  padding: 6px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  border: 1px solid #f8dcae;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+  .conjugations .set .highlighted, .conjugations .set .not-highlighted {
+    padding: 0 2px; }
+  .conjugations .set .highlighted {
+    background: #efc1a3; }
+  .conjugations .set li {
+    margin-bottom: 4px; }
+  .conjugations .set .title span {
+    font-weight: bold;
+    border-bottom: 1px dashed #f8dcae; }
+
+.bottom span {
+  margin-left: 15%; }
