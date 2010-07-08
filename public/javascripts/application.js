@@ -7,6 +7,7 @@ $(function(){
   
   $(".examples a").click(function(){
     $("input#s").val($(this).attr("rel"));
+    return false; //Prevent the '#' to appear on the URL. That's ugly!
   });
   
   $("#footer #author").hover(
