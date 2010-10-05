@@ -10,6 +10,7 @@
 </div>
 
 <% else %>
+  <% title(params[:s]) %>
   <% @verbs.each do |verb| %>
     <%= render "verb", :object => verb %>
   <% end %>
