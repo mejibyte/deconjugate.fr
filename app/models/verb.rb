@@ -28,7 +28,7 @@ class Verb
   end
   
   def infinitive
-    conjugation["infinitive present"]
+    conjugation["infinitive present"].first
   end
   
   def displayed_conjugation
