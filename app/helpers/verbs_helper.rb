@@ -13,12 +13,12 @@ module VerbsHelper
   
   def previous_infinitive_link(current_verb)
     conjugation = Conjugation.in_infinitive.find_by_content(current_verb).previous_infinitive
-    link_to conjugation, verb_path(:s => conjugation.content)
+    link_to conjugation, verb_path(:s => conjugation.content) if conjugation
   end
 
   def next_infinitive_link(current_verb)
     conjugation = Conjugation.in_infinitive.find_by_content(current_verb).next_infinitive
-    link_to conjugation, verb_path(:s => conjugation.content)    
+    link_to conjugation, verb_path(:s => conjugation.content) if conjugation
   end
 
 end
