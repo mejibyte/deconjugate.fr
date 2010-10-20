@@ -1,5 +1,4 @@
 h1 {
-  padding: 20px;
   text-shadow:0 -2px 0 rgba(248, 219, 172, 0.4);  
   color: #2f1b57;
 }
@@ -7,6 +6,13 @@ h1 {
 .verb {
   background: white;
   padding: 20px;
+}
+
+.infinitive {
+  padding: 20px;
+  .navigation {
+    font-size: 0.78em;
+  }
 }
 
 .conjugations .set {

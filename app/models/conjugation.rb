@@ -9,10 +9,10 @@ class Conjugation < ActiveRecord::Base
   end
   
   def previous_infinitive
-    Conjugation.in_infinitive.find(:first, :conditions => ["content < ?", self.content], :limit => 1, :order => "content DESC")
+    @previous_conjugation ||= Conjugation.in_infinitive.find(:first, :conditions => ["content < ?", self.content], :limit => 1, :order => "content DESC")
   end
   
   def next_infinitive
-    Conjugation.in_infinitive.find(:first, :conditions => ["content > ?", self.content], :limit => 1, :order => "content ASC")    
+    @next_conjugation ||= Conjugation.in_infinitive.find(:first, :conditions => ["content > ?", self.content], :limit => 1, :order => "content ASC")    
   end  
 end

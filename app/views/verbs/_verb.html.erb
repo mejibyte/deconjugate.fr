@@ -1,6 +1,9 @@
 <div class="verb">
   <div class="infinitive">
-  <h1><%= verb.infinitive %></h1>
+    <h1><%= verb.infinitive %></h1>
+    <span class="navigation">
+      <%= previous_infinitive_link(verb.infinitive) %> | <%= next_infinitive_link(verb.infinitive) %>
+    </span>
   </div>
 
   <div class="conjugations">
