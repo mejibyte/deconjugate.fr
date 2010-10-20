@@ -1,9 +1,25 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+aimer:
+  content: aimer
+  verb_in_infinitive: aimer
+
+aime:
   content: aime
   verb_in_infinitive: aimer
 
-two:
-  content: été
-  verb_in_infinitive: être
+"mangé":
+  content: "mangé"
+  verb_in_infinitive: manger
+  
+manger:
+  content: manger
+  verb_in_infinitive: manger
+  
+sors:
+  content: "sors"
+  verb_in_infinitive: "sortir"
+  
+sortir:
+  content: "sortir"
+  verb_in_infinitive: "sortir"

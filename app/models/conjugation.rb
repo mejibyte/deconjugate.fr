@@ -7,4 +7,12 @@ class Conjugation < ActiveRecord::Base
   def to_s
     content
   end
+  
+  def previous_infinitive
+    Conjugation.in_infinitive.find(:first, :conditions => ["content < ?", self.content], :limit => 1, :order => "content DESC")
+  end
+  
+  def next_infinitive
+    Conjugation.in_infinitive.find(:first, :conditions => ["content > ?", self.content], :limit => 1, :order => "content ASC")    
+  end  
 end

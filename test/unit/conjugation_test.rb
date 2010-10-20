@@ -13,4 +13,10 @@ class ConjugationTest < ActiveSupport::TestCase
     another_valid_conjugation = Conjugation.create(:content => "suis", :verb_in_infinitive => "suivre")
     assert another_valid_conjugation.valid?
   end
+  
+  def test_previous_and_next_infinitive
+    manger = conjugations(:manger)
+    assert manger.previous_conjugation == conjugations(:aimer)
+    assert manger.next_conjugation == conjugations(:sortir)
+  end
 end
