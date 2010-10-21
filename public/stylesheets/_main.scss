@@ -50,7 +50,12 @@ div.examples {
   position: fixed;
   bottom: 0px;
   right: 10px;
-  text-indent: -9999em;
+  reset: both;
+  
+  .social_link {
+    float: left;
+    padding: 5px;
+  }
 }
 
 #author {

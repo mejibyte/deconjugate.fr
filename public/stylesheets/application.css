@@ -111,7 +111,10 @@ div.examples {
   position: fixed;
   bottom: 0px;
   right: 10px;
-  text-indent: -9999em; }
+  reset: both; }
+  #footer .social_link {
+    float: left;
+    padding: 5px; }
 
 #author {
   background: url(/images/footer.png) no-repeat;
