@@ -3,7 +3,7 @@ namespace :conjugations do
   task :import => :environment do
     count = 0
     %x(french-conjugator --utf8 --all-infinitives).split("\n").each do |infinitive|
-      %x(french-conjugator --utf8 #{infinitive}).split("\n").each do |conjugations|
+      %x(french-conjugator --utf8 "#{infinitive}").split("\n").each do |conjugations|
         next if conjugations.length == 0 || conjugations.starts_with?("-")
         conjugations.split(",").each do |conjugation|
           
