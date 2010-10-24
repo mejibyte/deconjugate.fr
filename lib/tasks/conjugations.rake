@@ -31,7 +31,7 @@ namespace :conjugations do
           conjugation.strip!
           
           if Conjugation.first(:conditions => ["content = ? AND verb_in_infinitive = ?", conjugation, infinitive]).nil?
-            puts "#{conjugation} - #{verb_in_infinitive} is missing!"
+            puts "#{conjugation} - #{infinitive} is missing!"
             STDOUT.flush
           end
           
