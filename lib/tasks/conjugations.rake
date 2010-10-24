@@ -21,4 +21,23 @@ namespace :conjugations do
     end
     puts "Created #{count} conjugations."
   end
+  
+  desc "Reports which conjugations are missing from the database."
+  task :report_missing => :environment do 
+    %x(french-conjugator --utf8 --all-infinitives).split("\n").each do |infinitive|
+      %x(french-conjugator --utf8 "#{infinitive}").split("\n").each do |conjugations|
+        next if conjugations.length == 0 || conjugations.starts_with?("-")
+        conjugations.split(",").each do |conjugation|
+          conjugation.strip!
+          
+          if Conjugation.first(:conditions => ["content = ? AND verb_in_infinitive = ?", conjugation, infinitive]).nil?
+            puts "#{conjugation} - #{verb_in_infinitive} is missing!"
+            STDOUT.flush
+          end
+          
+        end
+      end
+    end
+  end
+  
 end
