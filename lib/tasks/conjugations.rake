@@ -40,4 +40,13 @@ namespace :conjugations do
     end
   end
   
+  desc "Sets the content_in_ascii field for all Conjugations"
+  task :update_content_in_ascii => :environment do
+    Conjugation.all.each do |conjugation|
+      conjugation.update_attributes!(:content_in_ascii => conjugation.content.to_ascii)
+      puts "Updated #{conjugation.content}"
+      STDOUT.flush
+    end
+  end
+  
 end

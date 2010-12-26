@@ -14,5 +14,9 @@ class Conjugation < ActiveRecord::Base
   
   def next_infinitive
     @next_conjugation ||= Conjugation.in_infinitive.find(:first, :conditions => ["content > ?", self.content], :limit => 1, :order => "content ASC")    
-  end  
+  end 
+  
+  def self.close_matches(query)
+    Conjugation.all(:conditions => { :content_in_ascii => query.to_ascii })
+  end
 end

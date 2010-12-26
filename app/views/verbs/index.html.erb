@@ -5,6 +5,20 @@
       <div class="set">
           It <%= example_link("looks", "regarder") %> like you <%= example_link("are", "être") %> <%= example_link("inventing", "inventer") %> your own French, because we <%= example_link("couldn't", "pouvoir") %> <%= example_link("find", "trouver") %> <i>"<%= params[:s] %>"</i>
           anywhere. Perhaps you <%= example_link("want", "vouloir") %> to <%= example_link("do", "faire") %> some research first? (or just <%= example_link("check", "vérifier") %> your spelling)
+      
+        <% unless @suggestions.empty? %>
+          <div>
+            <br />
+            Did you mean:
+            <ul>
+              <% @suggestions.each do |suggestion| %>
+                <li>
+                  <%= link_to suggestion.to_s, verb_path(:s => suggestion.to_s) %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
       </div>
   </div>
 </div>
